@@ -807,7 +807,7 @@ margin: 20px 0 20px 0;
 
 
 .table{
-  background-color:#2c4c43;
+  background-color:#2a4e42;
 }
 
 .table .content h3 {
@@ -852,6 +852,59 @@ margin: 20px 0 20px 0;
   padding-bottom: 0;
   justify-content: center;
 }
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2% 5% 5% 2%;
+}
+
+.text {
+  flex: 0 0 60%; /* 文字區塊佔 % 寬度 */
+  order: 1; /* 文字區塊的順序為第二個顯示 */
+  margin-top: 3%;
+}
+
+.video {
+  flex: 0 0 40%; /* 影片區塊佔 % 寬度 */
+  order: 2; /* 影片區塊的順序為第一個顯示 */
+  margin-top: 3%;
+}
+
+@media (max-width: 981px) {
+  .text, .video {
+    flex: 0 0 100%; /* 文字和影片都佔 100% 寬度 */
+    order: unset; /* 取消順序設定 */
+    margin-left: 2%;
+  }
+}
+
+/* 在螢幕寬度小於 768px 時調整佈局 */
+@media (max-width: 767px) {
+  .text, .video {
+    flex: 0 0 100%; /* 文字和影片都佔 100% 寬度 */
+    order: unset; /* 取消順序設定 */
+    margin-left: 2%;
+  }
+}
+
+.videobox {
+    position: relative;
+    width: 100%;
+    height: 0;
+    margin-top: 30px;
+    padding-bottom: 56.25%;
+}
+
+.videobox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .why-us .content {
   padding: 0 0 1% 24%;
@@ -1430,13 +1483,14 @@ margin: 20px 0 20px 0;
   text-align: center;
 }
 
+
 .clients img {
   width: 70%;
-
   transition: all 0.4s ease-in-out;
   display: inline-block;
   padding: 15px 0;
 }
+
 
 .clients img:hover {
   filter: none;

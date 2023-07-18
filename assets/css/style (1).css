@@ -400,7 +400,7 @@ p{
 
 #hero h2 {
   color: #aeaeae;
-  margin: 30px 0 30px 0;
+  margin: 0px 0 0px 0;
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
@@ -459,6 +459,13 @@ section {
 .section-title {
   text-align: center;
   padding-bottom: 10px;
+}
+
+.section-title h1 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  color: #151515;
 }
 
 .section-title h2 {
@@ -1596,7 +1603,7 @@ margin: 20px 0 20px 0;
 # Pricing
 --------------------------------------------------------------*/
 .pricing .box {
-  padding: 20px;
+  padding: 50px;
   background: #fff;
   text-align: center;
   border-radius: 8px;
@@ -1665,7 +1672,7 @@ margin: 20px 0 20px 0;
 
 .pricing .box .btn-buy {
   display: inline-block;
-  padding: 10px 40px 12px 40px;
+  padding: 10px 40px 20px 40px;
   border-radius: 5px;
   border: 2px solid #7cc576;
   color: #7cc576;
@@ -1709,6 +1716,13 @@ margin: 20px 0 20px 0;
   text-transform: uppercase;
   font-weight: 600;
 }
+
+@media (max-width: 576px) { 
+  .pricing .box {
+    margin-bottom: 20px; 
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
@@ -1807,8 +1821,16 @@ margin: 20px 0 20px 0;
   color: #484848;
 }
 
+.contact .info a {
+  padding: 0 0 0 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #484848;
+}
+
+
 .contact .info .email,
-.contact .info .phone {
+.contact .info .location {
   margin-top: 40px;
 }
 

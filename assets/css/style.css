@@ -1723,6 +1723,11 @@ margin: 20px 0 20px 0;
   }
 }
 
+.pricing .btn-large {
+  font-size: 24px;
+  padding: 20px 40px;
+}
+
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions

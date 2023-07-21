@@ -914,7 +914,7 @@ margin: 20px 0 20px 0;
 
 
 .why-us .content {
-  padding: 0 0 1% 24%;
+  padding: 0 0 1% 5%; /* 這裡修改為5% */
 }
 
 .why-us .content h3 {
@@ -947,11 +947,40 @@ margin: 20px 0 20px 0;
 }
 
 .why-us .accordion-list {
-  padding: 0 100px 60px 100px;
+  padding: 0 100px 60px 5%; /* 這裡修改為5% */
 }
 
+@media (max-width: 1024px) {
+  .why-us .content {
+    padding: 0 5% 0 5%; 
+  }
+  .why-us .accordion-list {
+    padding: 0 5% 60px 5%; 
+  }
+}
+
+@media (max-width: 992px) {
+  .why-us .content {
+    padding: 0 5% 0 5%; 
+  }
+  .why-us .accordion-list {
+    padding: 0 5% 60px 5%; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .why-us .content {
+    padding: 0 5% 0 5%; 
+  }
+  .why-us .accordion-list {
+    padding: 0 5% 60px 5%; 
+  }
+}
+
+
+
 .why-us .accordion-list ul {
-  padding-left: 20%;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -1672,20 +1701,28 @@ margin: 20px 0 20px 0;
 
 .pricing .box .btn-buy {
   display: inline-block;
-  padding: 10px 40px 20px 40px;
+  padding: 15px 40px; /* 修改為 15px */
+  background: #61b959; /* 移除 style，添加背景顏色 */
+  color: #fff; /* 移除 style，添加文字顏色 */
   border-radius: 5px;
-  border: 2px solid #7cc576;
-  color: #7cc576;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  border: none; /* 添加邊框為無 */
+  padding: 20px 40px;  /* 調整 padding 大小來改變按鈕的大小 */
+  font-size: 20px; /* 調整 font-size 來改變文字的大小 */
   font-weight: 600;
+  font-family: "Montserrat", sans-serif;
   transition: 0.3s;
+  text-decoration: none; /* 移除連結的底線 */
 }
 
+.pricing .box .btn-large {
+  padding: 30px 60px;  /* 更大的 padding 使按鈕更大 */
+  font-size: 24px;  /* 更大的 font-size 使文字更大 */
+}
+
+
 .pricing .box .btn-buy:hover {
-  background: #7cc576;
-  color: #fff;
+  background: #fff;
+  color: #61b959;;
 }
 
 .pricing .recommended {
@@ -1698,8 +1735,8 @@ margin: 20px 0 20px 0;
 }
 
 .pricing .recommended .btn-buy:hover {
-  background: #61b959;
-  border-color: #61b959;
+  background: #fff;
+  color: #61b959;;
 }
 
 .pricing .recommended-badge {

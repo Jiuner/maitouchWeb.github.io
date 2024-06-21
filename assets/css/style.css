@@ -1626,6 +1626,143 @@ margin: 20px 0 20px 0;
   opacity: 1;
   transition: bottom ease-in-out 0.4s;
 }
+/*--------------------------------------------------------------
+# News
+--------------------------------------------------------------*/
+/* 新增的CSS样式 */
+.news .box {
+    padding: 50px;
+    background: #fff;
+    text-align: left;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #fff;
+}
+
+.news .box h3 {
+    font-weight: 400;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #151515;
+}
+
+.news .box h4 {
+    font-size: 42px;
+    color: #151515;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+}
+
+.news .box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.news .box p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.news .box p a:hover {
+    text-decoration: underline;
+}
+
+.news .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.news .pagination a {
+    color: #343a40;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.news .pagination a.active {
+    background-color: #5c9552;
+    color: white;
+    border: 1px solid #5c9552;
+}
+
+.news .pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.news .news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news .news-item {
+    display: none;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* 默认情况下显示第一页内容 */
+#page1:target ~ .news-list .news-item,
+#page2:target ~ .news-list .news-item {
+    display: none;
+}
+
+#page1:target ~ .news-list .page-1,
+#page2:target ~ .news-list .page-2 {
+    display: flex;
+}
+
+/* 如果没有任何页面是目标，则默认显示第一页 */
+.news .page-1 {
+    display: flex;
+}
+
+/* 当页面1是目标时，隐藏 */
+#page1:target ~ .news-list .page-1 {
+    display: flex;
+}
+
+/* 当页面2是目标时，显示页面2的内容 */
+#page2:target ~ .news-list .page-2 {
+    display: flex;
+} 
+
+.news .news-date {
+    font-size: 1em;
+    color: #666;
+    width: 120px;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.news .news-source {
+    font-size: 1em;
+    color: #333;
+    width: 150px;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.news .news-content {
+    flex: 1;
+}
+
+.news .news-content a {
+    text-decoration: none;
+    color: #343a40;
+}
+
+.news .news-content a:hover {
+    text-decoration: underline;
+}
 
 /*--------------------------------------------------------------
 # Pricing

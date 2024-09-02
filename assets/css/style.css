@@ -1901,6 +1901,31 @@ margin: 20px 0 20px 0;
   padding: 20px 40px;
 }
 
+/*--------------------------------------------------------------
+# button return
+--------------------------------------------------------------*/
+.btn-return {
+    display: inline-block;
+    padding: 10px 30px;  /* 统一的 padding 设置 */
+    background: #61b959; /* 统一的背景色 */
+    color: #fff;         /* 文字颜色设置为白色 */
+    border-radius: 5px;  /* 边框圆角设置为 5px */
+    border: none;        /* 无边框 */
+    font-size: 20px;     /* 字体大小为 20px */
+    font-weight: 600;    /* 字体加粗 */
+    font-family: "Montserrat", sans-serif; /* 使用 Montserrat 字体，没有该字体则回退到 sans-serif */
+    transition: background-color 0.3s, color 0.3s; /* 过渡效果应用于背景色和文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    text-align: center; /* 文字居中对齐 */
+    position: relative; /* 相对定位 */
+    overflow: hidden;   /* 隐藏溢出内容 */
+}
+
+.btn-return:hover {
+    background: #fff; /* 悬停时背景色变为白色 */
+    color: #61b959;  /* 悬停时文字颜色变为原背景色 */
+}
+
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions

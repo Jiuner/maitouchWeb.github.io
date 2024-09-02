@@ -591,7 +591,7 @@
     </section>
     -->
     
-    <!-- ======= Team Section ======= -->
+    <!--
     <section id="team" class="team">
       <div class="container">
 
@@ -679,7 +679,92 @@
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section>
+    -->
+    
+    <!-- ======= 得獎殊榮 ======= -->
+    <section id="team" class="team">
+      <div class="container">
+        <div class="row">
+            <!-- 圖片 1 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" onclick="openDetails('assets/html/award1.html')">
+                    <img src="assets/img/尤努斯0730.webp" class="img-fluid" alt="第二屆尤努斯創新獎領獎照片">
+                    <div class="member-info">
+                        <h4 style="font-size: 22px">第二屆尤努斯創新獎</h4>
+                        <span style="font-size: 18px">社會組季軍</span>
+                        <p>2020.10.19</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 圖片 2 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" onclick="openDetails('assets/html/award2.html')">
+                    <img src="assets/img/國家新創獎領獎_藍心修2_20230406.webp" class="img-fluid" alt="國家新創獎領獎照片">
+                    <div class="member-info">
+                        <h4 style="font-size: 22px">第十九屆國家新創獎</h4>
+                        <span style="font-size: 18px">InnoZone技術特展十大亮點</span>
+                        <p>2022.12.23</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 圖片 3 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" onclick="openDetails('assets/html/award3.html')">
+                    <img src="assets/img/2023未來科技獎.webp" class="img-fluid" alt="2023未來科技獎領照片">
+                    <div class="member-info">
+                        <h4 style="font-size: 22px">未來科技獎</h4>
+                        <span style="font-size: 18px">FUTURE TECH AWARD</span>
+                        <p>2023.08.31</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 圖片 4 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" onclick="openDetails('assets/html/award4.html')">
+                    <img src="assets/img/ee機智獎3.webp" class="img-fluid" alt="ee創意挑戰賽領獎照片">
+                    <div class="member-info">
+                        <h4 style="font-size: 22px">2023 EE創意挑戰賽</h4>
+                        <span style="font-size: 18px">機智生活 創E未來</span>
+                        <span style="font-size: 18px">機智獎</span>
+                        <p>2023.12.06</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 圖片 5 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" onclick="openDetails('assets/html/award5.html')">
+                    <img src="assets/img/ee人氣獎3.webp" class="img-fluid" alt="ee創意挑戰賽領獎照片">
+                    <div class="member-info">
+                        <h4 style="font-size: 22px">2023 EE創意挑戰賽</h4>
+                        <span style="font-size: 18px">機智生活 創E未來</span>
+                        <span style="font-size: 18px">人氣獎</span>
+                        <p>2023.12.06</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 圖片 5 -->
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" onclick="openDetails('assets/html/award6.html')">
+                    <img src="assets/img/who宣達團2024.webp" class="img-fluid" alt="who宣達團2024照片">
+                    <div class="member-info">
+                        <h4 style="font-size: 22px">受邀日內瓦參與2024 WHO宣達團特展</h4>
+                        <span style="font-size: 18px">m'AI Touch非接觸式AI技術　台灣創新助力全球公共衛生</span>
+                        <p>2024.06.05</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+      </div>
+    </div>
+    
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing section-bg">
@@ -941,6 +1026,13 @@ if (displayCounter) {
     document.getElementById("visitCount").textContent = localStorage.getItem("visitCount");
 } else {
     document.getElementById("footer").style.display = 'none';
+}
+</script>
+
+<!-- 得獎 -->
+<script>
+function openDetails(pageUrl) {
+    window.open(pageUrl, '_blank');
 }
 </script>
 

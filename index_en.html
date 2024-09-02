@@ -716,8 +716,12 @@
             <a href="#header" class="scrollto footer-logo"><img src="assets/img/LOGO_CMYK（印刷）_淺色底-02.webp" alt=""></a>
             <h4 style="font-size: 18px;">m’AI Touch Technology Co., Ltd.</h4>
             <br>
-            <h4 style="color:#2b4e43;">Start With Human Nature, </h4>
-            <h4 style="color:#2b4e43;">Coexist With The World.</h4>
+            <!--<h4 style="color:#2b4e43;">Start With Human Nature, </h4> -->
+            <!--<h4 style="color:#2b4e43;">Coexist With The World.</h4> -->
+            
+            <h4 style="color:#2b4e43;">Let's keep in m'AI Touch!</h4>
+            <br>
+            <h5 style="font-size: 15px;"> Total visits : <span id="visitCount"></span> times.</h5>
           </div>
         </div>
 
@@ -742,6 +746,33 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<!-- 以下是顯示瀏覽人數 -->
+<script>
+var displayCounter = true; // 控制是否顯示計數器
+var initialCount = 1698; // 初始化的訪問次數
+// 檢查localStorage中是否已有計數器值
+if (localStorage.getItem("visitCount")) {
+    var currentCount = Number(localStorage.getItem("visitCount"));
+    // 檢查是否小於初始計數，是則從初始計數開始
+    if (currentCount < initialCount) {
+        localStorage.setItem("visitCount", initialCount);
+    } else {
+        // 如果已經有了，取出並增加
+        localStorage.setItem("visitCount", currentCount + 1);
+    }
+} else {
+    // 如果沒有，初始化為 initialCount
+    localStorage.setItem("visitCount", initialCount);
+}
+
+// 根據 displayCounter 變量來決定是否顯示計數器
+if (displayCounter) {
+    document.getElementById("visitCount").textContent = localStorage.getItem("visitCount");
+} else {
+    document.getElementById("footer").style.display = 'none';
+}
+</script>
 
 </body>
 

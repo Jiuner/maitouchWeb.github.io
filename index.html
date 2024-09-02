@@ -50,7 +50,6 @@
 </div>
 
   <!-- ======= Header ======= -->
-
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -857,11 +856,8 @@
 
       </div>
     </section><!-- End Contact Section -->
-
-
-
   </main><!-- End #main -->
-
+  
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -876,6 +872,8 @@
             <h4 style="font-size: 18px;">m’AI Touch Technology Co., Ltd.</h4>
             <br>
             <h4 style="color:#2b4e43;">Let's keep in m'AI Touch!</h4>
+            <br>
+            <h5 style="font-size: 15px;"> 瀏覽人數 : <span id="visitCount"></span> 次。</h5>
           </div>
         </div>
 
@@ -902,7 +900,7 @@
   <script src="assets/js/main.js"></script>
 
 
-  <!-- 以下是feature自動跳轉的部分 -->
+<!-- 以下是feature自動跳轉的部分 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="path/to/your/main.js"></script>
   <script>
@@ -919,6 +917,32 @@ $(document).ready(function () {
 });
 </script>
 
+<!-- 以下是顯示瀏覽人數 -->
+<script>
+var displayCounter = true; // 控制是否顯示計數器
+var initialCount = 1698; // 初始化的訪問次數
+// 檢查localStorage中是否已有計數器值
+if (localStorage.getItem("visitCount")) {
+    var currentCount = Number(localStorage.getItem("visitCount"));
+    // 檢查是否小於初始計數，是則從初始計數開始
+    if (currentCount < initialCount) {
+        localStorage.setItem("visitCount", initialCount);
+    } else {
+        // 如果已經有了，取出並增加
+        localStorage.setItem("visitCount", currentCount + 1);
+    }
+} else {
+    // 如果沒有，初始化為 initialCount
+    localStorage.setItem("visitCount", initialCount);
+}
+
+// 根據 displayCounter 變量來決定是否顯示計數器
+if (displayCounter) {
+    document.getElementById("visitCount").textContent = localStorage.getItem("visitCount");
+} else {
+    document.getElementById("footer").style.display = 'none';
+}
+</script>
 
 </body>
 
